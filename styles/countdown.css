@@ -1,0 +1,236 @@
+/* =========================
+   COUNTDOWN TITLE (SOFT LUXURY)
+========================= */
+
+.countdown-title{
+    position: relative;
+    display: inline-block;
+
+   font-family: 'Great Vibes', cursive;
+    font-size: 45px;
+     font-weight: 500;
+    color:#a78706;
+margin-top:20px;
+    letter-spacing:3px;
+    line-height:1;
+
+    text-shadow:0 20px 40px rgba(232,75,138,.15);
+
+    animation: titleFloatSoft 3.5s ease-in-out infinite;
+}
+
+/* elegant line (underline) */
+.countdown-title h2::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-14px;
+    transform:translateX(-50%);
+
+    width:140px;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+      #ca8e04,
+        transparent
+    );
+
+    opacity:.9;
+}
+
+
+
+/* animation */
+@keyframes titleFloatStrong{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+/* ===================================
+   COUNTDOWN WRAPPER
+=================================== */
+
+.countdown{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px 8% 120px;
+
+    text-align:center;
+
+    z-index:1;
+}
+
+/* ===================================
+   TIMER
+=================================== */
+
+.timer{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+    gap:30px;
+
+    margin-top:50px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* ===================================
+   TIME BOX
+=================================== */
+
+.time-box{
+    position:relative;
+
+    min-width:110px;
+    padding:10px 8px;
+
+    animation: fadeFloat 1s ease;
+}
+
+/* separator line */
+.time-box::after{
+    content:"";
+    position:absolute;
+
+    left:50%;
+    bottom:-8px;
+    transform:translateX(-50%);
+
+    width:40px;
+    height:1px;
+
+    background: rgba(0,0,0,.15);
+}
+
+/* numbers */
+.time-box h3{
+
+    font-size:40px;
+    font-family: 'Playfair Display', serif;
+    font-weight:600;
+
+    color:#111;
+
+    line-height:1;
+
+    text-shadow: 0 8px 18px rgba(0,0,0,.08);
+
+    animation: numberSoft 3s ease-in-out infinite;
+}
+
+/* label */
+.time-box span{
+
+    display:block;
+    margin-top:6px;
+
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#555;
+}
+
+/* dots */
+.time-box:not(:last-child)::before{
+
+    content:"•";
+    position:absolute;
+
+    right:-16px;
+    top:38%;
+
+    font-size:14px;
+    color:rgba(0,0,0,.25);
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes fadeFloat{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+        filter:blur(6px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+}
+
+@keyframes numberSoft{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-1.5px);
+    }
+}
+
+
+.countdown-image img {
+    width:100%;        /* حجم مناسب للديسكتوب */
+    max-width: 100%;      /* يخليها تصغر تلقائي على الموبايل */
+    height: auto;        /* يحافظ على الأبعاد */
+    display: block;
+    margin: 30px auto;      /* توسيط الصورة */
+
+}
+
+
+/* ===================================
+   MOBILE FIX
+=================================== */
+
+@media(max-width:768px){
+
+    .countdown{
+        padding:50px 5% 150px;
+    }
+
+    .timer{
+        flex-wrap:nowrap;
+        justify-content:space-between;
+        gap:6px;
+    }
+
+    .time-box{
+        flex:1;
+        min-width:20px;
+        padding:0;
+    }
+
+    .time-box h3{
+        font-size:25px;
+    }
+
+    .time-box span{
+        font-size:9px;
+        letter-spacing:1px;
+    }
+
+    .time-box:not(:last-child)::before{
+        right:-6px;
+        font-size:10px;
+    }
+.countdown-image img {
+        width:100%;   /* أصغر على الموبايل */
+    }
+   
+}

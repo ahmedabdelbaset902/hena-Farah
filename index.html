@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl>
+
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة فرحنا</title>
+<!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<!-- ✅ الخط اللي كان ناقص -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+
+<!-- =========================
+         FONT AWESOME (non-blocking)
+    ========================== -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/eventDetails.css">
+<link rel="stylesheet" href="styles/hreo.css">
+<link rel="stylesheet" href="styles/schedule.css">
+<link rel="stylesheet" href="styles/thanks.css">
+<link rel="stylesheet" href="styles/footer.css">
+<link rel="stylesheet" href="styles/countdown.css">
+<link rel="stylesheet" href="styles/photo.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- MUSIC PLAYER -->
+
+    <div class="music-player">
+
+        <button id="musicBtn">
+
+            <div class="music-disc">
+                <i id="musicIcon" class="fa-solid fa-music"></i>
+            </div>
+
+        </button>
+
+        <audio id="bgMusic" preload="auto" playsinline webkit-playsinline>
+            <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+    <div id="intro" class="intro-screen">
+
+        <video id="introVideo" class="intro-video" muted playsinline webkit-playsinline preload="auto">
+
+            <source src="imags/Back1.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <!-- MAIN PAGE -->
+    <section class="main" id="main">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="clender">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </p>
+
+                <div class="date-box" dir="rtl">
+                    <span>18</span>
+                    <span>يوليو</span>
+                    <span>2026</span>
+                </div>
+                <p class="small-text">
+                    <i class="fa-regular fa-clock"></i>
+                </p>
+
+                <div class="date-text">
+                    الساعه السابعه مساء
+                </div>
+
+                <button class="save-btn" onclick="addToCalendar()">
+                    Save The Date
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+         COUNTDOWN
+    ========================== -->
+
+        <section class="countdown" style="margin-bottom:200px;">
+
+            <div class="countdown-title">
+                <h2 class="countdown-title">Count Down</h2>
+            </div>
+
+            <div class="timer" dir="rtl">
+
+                <div class="time-box">
+                    <h3 id="days">00</h3>
+                    <span>يوم</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="hours">00</h3>
+                    <span>ساعة</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="minutes">00</h3>
+                    <span>دقيقة</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="seconds">00</h3>
+                    <span>ثانية</span>
+                </div>
+
+            </div>
+
+            <!-- الصورة تحت العداد مباشرة -->
+            <div class="countdown-image">
+                <img src="./imags/download (1).png" alt="">
+            </div>
+
+        </section>
+        <!-- =========================
+     EVENT DETAILS
+========================== -->
+        <section class="event-section">
+
+            <!-- SECTION TITLE -->
+            <div class="section-title">
+                <h2>Whene & Where </h2>
+            </div>
+
+            <div class="card">
+
+                <!-- CONTENT -->
+                <div class="content">
+
+                    <div class="arabic"> بيت العروسه </div>
+                    <div class="arabicP"> مدينه قطور ,محافظة الغربيه </div>
+                    <div class="arabicP"> وقت البدء 7:00 مساء </div>
+                    <a href="https://maps.google.com/?q=قاعة+كليوباترا+قطور+الغربية" target="_blank" class="btn">
+
+                        Get Directions ↗
+
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps?q=قاعة+كليوباترا+قطور+الغربية&output=embed" width="100%"
+                    height="450" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </section>
+
+        <div class="dance">
+            <img src="imags/dance2.png" alt="Photo 1">
+        </div>
+        <!-- =========================
+         schedule
+    ========================== -->
+        <section class="schedule">
+
+            <h2 class="schedule-title">برنامج الحنة</h2>
+
+            <div class="timeline">
+
+                <!-- 1 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الأولى</span>
+                        <h3 class="clickable">زفة الدخلة والترحيب</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                دخول العروسة بفستان سواريه بسيط وسط الزغاريط والترحيب بالمعازيم وتقديم المشروبات.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-person-walking"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الثانية</span>
+                        <h3 class="clickable">شو الجلابية البلدي</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                خروج العروسة بالجلابية البلدي والكردان والنديل، مع رقصة العصايا على الأغاني الصعيدية
+                                والشعبية.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الثالثة</span>
+                        <h3 class="clickable">شو الساري الهندي</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                خروج العروسة بالساري الهندي مع فقرة استعراضية ورقصات جماعية مميزة.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-fan"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الرابعة</span>
+                        <h3 class="clickable">شو الملاية اللف</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                ظهور العروسة بالملاية اللف والمنديل مع رقصة إسكندراني مبهجة مع الصديقات.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الخامسة</span>
+                        <h3 class="clickable">شو القفطان المغربي</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                إطلالة عربية بالقفطان المغربي أو الزي الخليجي مع رقصات هادئة ومميزة.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة السادسة</span>
+                        <h3 class="clickable">رقصة المنديل والشعر المستعار</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                فقرة حماسية مع أصحاب العروسة باستخدام المناديل والشرشوب على المهرجانات السريعة.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة السابعة</span>
+                        <h3 class="clickable">زفة صينية الحنة</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                دخول صينية الحنة المزينة بالشموع والورد وسط أغاني الحنة التراثية.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة الثامنة</span>
+                        <h3 class="clickable">فقرة نقش الحنة</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                بدء رسم الحنة للعروسة ثم للأهل والصديقات وسط أجواء احتفالية.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة التاسعة</span>
+                        <h3 class="clickable">جلسة التصوير</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                التقاط الصور التذكارية والسيلفي مع الأهل والأصدقاء بجميع الإطلالات.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="timeline-item">
+                    <div class="top-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>الفقرة العاشرة</span>
+                        <h3 class="clickable">التوزيعات والختام</h3>
+
+                        <p class="details">
+                            <span class="ar">
+                                توزيع هدايا الحنة والتقاط آخر الصور وختام الاحتفال مع المعازيم.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+     THANK YOU
+========================== -->
+
+        <section>
+
+            <div class="thanks" id="thanks">
+
+                <h2 id="thanksTitle">
+                    See You Here
+                </h2>
+
+                <p id="thanksEn"></p>
+
+                <div id="thanksAr" class="thanks-ar"></div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+         FOOTER
+    ========================== -->
+
+        <footer>
+
+            A & H Wedding Invitation © 2026
+
+        </footer>
+
+    </section>
+
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/schedule.js"></script>
+    <script src="./scripts/thanks.js"></script>
+    <script src="./scripts/countdown.js"></script>
+</body>
+
+</html>
