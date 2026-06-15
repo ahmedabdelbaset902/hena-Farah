@@ -132,9 +132,9 @@ musicBtn?.addEventListener("click", (e) => {
 
 function addToCalendar() {
 
-    const title = "حفل زفاف احمد & هدي";
+     const title = "حفل زفاف احمد & وفاء";
     const details = "نتشرف بحضوركم حفل زفافنا";
-    const location = " قاعه كيلوترا قطور غربيه  ";
+    const location = " منزل العروسه ";
 
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
