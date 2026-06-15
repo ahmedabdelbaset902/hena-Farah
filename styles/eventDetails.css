@@ -139,7 +139,7 @@ margin-top: 100px;
     inset: 0;
 
     /* طبقة شفافة خفيفة جدًا */
-    background: rgba(0, 0, 0, 0.03);
+    background:rgba(43, 43, 43, 0.03);
 
     /* بلور خفيف عشان يدي لمسة زجاج بس */
     backdrop-filter: blur(1px);
