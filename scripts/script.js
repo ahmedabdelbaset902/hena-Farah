@@ -132,7 +132,7 @@ musicBtn?.addEventListener("click", (e) => {
 
 function addToCalendar() {
 
-     const title = "حفل زفاف احمد & وفاء";
+    const title = "حفل زفاف احمد & وفاء";
     const details = "نتشرف بحضوركم حفل زفافنا";
     const location = " منزل العروسه ";
 
@@ -141,8 +141,8 @@ function addToCalendar() {
     if (!isIOS) {
 
         // Android + Desktop → Google Calendar (timezone-safe)
-        const start = "20260618T200000";
-const end   = "20260619T010000";
+        const start = "20260718T200000";
+const end   = "20260719T010000";
 
         const googleUrl =
             "https://www.google.com/calendar/render?action=TEMPLATE" +
@@ -169,8 +169,8 @@ BEGIN:VEVENT
 UID:123456
 DTSTAMP:20260601T120000Z
 SUMMARY:${title}
-DTSTART;TZID=Africa/Cairo:20260618T200000
-DTEND;TZID=Africa/Cairo:20260619T010000
+DTSTART;TZID=Africa/Cairo:20260718T200000
+DTEND;TZID=Africa/Cairo:20260719T010000
 LOCATION:${location}
 DESCRIPTION:${details}
 END:VEVENT
